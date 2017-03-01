@@ -17,23 +17,23 @@ gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
 echo '==========finish gcloud auth accout config==================='
 
 echo '==============gcloud config project=========================='
-echo $PROJECT_NAME_STG
-gcloud --quiet config set project $PROJECT_NAME_STG
+echo ${PROJECT_NAME_STG}
+gcloud --quiet config set project ${PROJECT_NAME_STG}
 echo '==============finish gcloud config project==================='
 
 echo '==============gcloud config container cluster================'
-echo $CLUSTER_NAME_STG
-gcloud --quiet config set container/cluster $CLUSTER_NAME_STG
+echo ${CLUSTER_NAME_STG}
+gcloud --quiet config set container/cluster ${CLUSTER_NAME_STG}
 echo '==============finish config container cluster================'
 
 echo '==============gcloud config compute zone====================='
 echo ${CLOUDSDK_COMPUTE_ZONE}
-gcloud --quiet config set compute/zone $CLOUDSDK_COMPUTE_ZONE
+gcloud --quiet config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
 echo '==============finish gcloud config compute zone=============='
 
 echo '==============gcloud config cluster credentials=============='
 echo $CLUSTER_NAME_STG
-gcloud --quiet container clusters get-credentials $CLUSTER_NAME_STG
+gcloud --quiet container clusters get-credentials ${CLUSTER_NAME_STG}
 echo '========finish gcloud container cluster credentials=========='
 
 #gcloud docker push gcr.io/${PROJECT_NAME_STG}/${DOCKER_IMAGE_NAME}
