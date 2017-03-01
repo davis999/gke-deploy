@@ -6,7 +6,7 @@ set -e
 
 echo '==========decode gcloud service key=========================='
 
-echo $GCLOUD_SERVICE_KEY_STG | base64 --decode -i > ${HOME}/gcloud-service-key.json
+echo $GCLOUD_SERVICE_KEY_STG | base64 --decode > ${HOME}/gcloud-service-key.json
 
 echo '==========finish decode gcloud service key==================='
 
