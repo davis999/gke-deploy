@@ -48,6 +48,10 @@ echo '==============kubectl config current-context================='
 kubectl config current-context
 echo '============================================================='
 
+echo '==============kubectl get pods==============================='
+kubectl get pods
+echo '==============finish kubectl get pods========================'
+
 echo '==============kubectl create yaml============================'
 kubectl create -f ./category/k8s.yaml
 echo '============================================================='
