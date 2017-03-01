@@ -12,7 +12,7 @@ echo '==========finish decode gcloud service key==================='
 
 echo '==========gcloud auth accout config=========================='
 
-gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
 
 echo '==========finish gcloud auth accout config==================='
 
