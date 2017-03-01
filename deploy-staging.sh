@@ -28,7 +28,7 @@ echo '==============finish config container cluster================'
 
 echo '==============gcloud config compute zone====================='
 echo ${CLOUDSDK_COMPUTE_ZONE}
-gcloud --quiet config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
+gcloud --quiet config set compute/zone $CLOUDSDK_COMPUTE_ZONE
 echo '==============finish gcloud config compute zone=============='
 
 echo '==============gcloud config cluster credentials=============='
