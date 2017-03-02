@@ -4,6 +4,9 @@ set -e
 
 #docker build -t gcr.io/${PROJECT_NAME_STG}/${DOCKER_IMAGE_NAME}:$TRAVIS_COMMIT .
 
+#for credentials
+gcloud config set container/use_client_certificate True
+
 echo '==========decode gcloud service key=========================='
 
 echo $GCLOUD_SERVICE_KEY_STG | base64 --decode > ${HOME}/gcloud-service-key.json
